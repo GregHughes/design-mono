@@ -4,7 +4,8 @@ This is an optimal configuration for using particles.js non-interactively in the
 
 ## config
 
-`{
+```json
+{
   "particles": {
     "number": {
       "value": 100,
@@ -114,7 +115,7 @@ This is an optimal configuration for using particles.js non-interactively in the
   },
   "retina_detect": true
 }
-`
+```
 
 ## Acknowledgment
 
