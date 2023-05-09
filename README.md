@@ -1,9 +1,3 @@
-# Favorite particles.js configuration
+This is a monorepo containing a curated list of design elements and UI components that I personally enjoy using or find visually appealing.
 
-This is an optimal configuration for using particles.js in the background.
-
-## particles.js source
-
-Find the GitHub repo at https://github.com/VincentGarreau/particles.js/ or use the sandbox version at https://vincentgarreau.com/particles.js/
-
-Note: I am not the author of particles.js
+Please see the README for each listed directory for more information about that specific library/component.
