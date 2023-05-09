@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Hover States with Box Shadow</title>
+    <style>
+      .container {
+        max-width: 40rem;
+        margin: auto;
+        font-size: 1.4rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      a:visited {
+        color: inherit;
+      }
+
+      ul {
+        list-style: none;
+        padding: unset;
+      }
+
+      #back-button {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        padding: 0.75rem 1rem;
+        margin: 1rem;
+        border: 2px solid black;
+        border-radius: 7px;
+      }
+
+      .hover-item {
+        padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 7px;
+        text-align: center;
+
+        transition: 0.2s ease-in-out;
+      }
+
+      .hover-item:hover {
+        /* More info on transform distortion fixes: https://stackoverflow.com/questions/14677490/blurry-text-after-using-css-transform-scale-in-chrome */
+        /* for scale use 1.048 instead of 1.05 for a better approximation to a whole-pixel font size, reducing the sub-pixel blurring */
+        /* use translateZ(0) to add hardware acceleration to the animation */
+        transform: scale(1.048) translateZ(0);
+
+        /* better rendering */
+        -webkit-font-smoothing: subpixel-antialiased;
+        /* simplifies the animation to just the front of the object, whereas the default state is the front and the back */
+        backface-visibility: hidden;
+
+        box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Animated Hover States w/ Box Shadow</h1>
+      <ul>
+        <li class="hover-item">Hover Item 1</li>
+        <li class="hover-item">Hover Item 2</li>
+        <li class="hover-item">Hover Item 3</li>
+        <li class="hover-item">Hover Item 4</li>
+        <li class="hover-item">Hover Item 5</li>
+      </ul>
+    </div>
+    <div id="back-button"><a href="../index.html">< Back</a></div>
+  </body>
+</html>

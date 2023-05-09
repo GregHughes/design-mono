@@ -5,9 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Particles.js Implementation</title>
+    <style>
+      .container {
+        max-width: 40rem;
+        margin: auto;
+        font-size: 1.4rem;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: inherit;
+      }
+
+      #back-button {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        padding: 0.75rem 1rem;
+        margin: 1rem;
+        border: 2px solid black;
+        border-radius: 7px;
+      }
+    </style>
   </head>
   <body>
     <div id="particles-js"></div>
+    <div id="back-button"><a href="../index.html">< Back</a></div>
     <script src="particles.min.js"></script>
     <script src="load.js"></script>
   </body>

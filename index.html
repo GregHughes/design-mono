@@ -5,11 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design Monorepo</title>
+    <style>
+      .container {
+        max-width: 40rem;
+        margin: auto;
+        font-size: 1.4rem;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      ul {
+        list-style: none;
+        padding: unset;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      a:visited {
+        color: inherit;
+      }
+
+      .list-item {
+        padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        border: 2px solid black;
+        border-radius: 7px;
+        text-align: center;
+        transition: 0.2s ease-in-out;
+      }
+
+      .list-item:hover {
+        transform: scale(1.048);
+      }
+    </style>
   </head>
   <body>
-    <h1>Design Monorepo</h1>
-    <ul>
-      <li><a href="/particles.js/particles.html">Particles.js</a></li>
-    </ul>
+    <div class="container">
+      <h1>Design Monorepo</h1>
+      <h3>JavaScript</h3>
+      <ul>
+        <li>
+          <a href="/particles.js/particles.html">
+            <div class="list-item">Particles.js</div>
+          </a>
+        </li>
+      </ul>
+      <h3>CSS</h3>
+      <ul>
+        <li>
+          <a href="/css-hover-states-shadow/css-hover-states-shadow.html">
+            <div class="list-item">Animated Hover States (w/ Box Shadow)</div>
+          </a>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
